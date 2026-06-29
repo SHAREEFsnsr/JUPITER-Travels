@@ -1,25 +1,11 @@
-document.getElementById("bookingForm").addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-    let destination = document.getElementById("destination").value;
-
-    if (name === "" || email === "" || phone === "" || destination === "") {
-        alert("Please fill in all required fields.");
-        return;
-    }
-
-    alert("Thank you for choosing JUPITER Travels! Your booking request has been received.");
-
-    this.reset();
-
-});
+// Trip Cost Calculator
 function calculateTrip() {
 
-    let price = Number(document.getElementById("destinationPrice").value);
+    const destination = document.getElementById("destinationPrice");
+
+    if (!destination) return;
+
+    let price = Number(destination.value);
     let persons = Number(document.getElementById("persons").value);
     let days = Number(document.getElementById("days").value);
 
@@ -28,76 +14,81 @@ function calculateTrip() {
         return;
     }
 
-    // Package price is for the full trip per person.
     let total = price * persons;
 
     document.getElementById("totalCost").innerHTML =
         "Estimated Trip Cost: ₹" + total.toLocaleString("en-IN");
 }
+
+
+// Contact Form
 const form = document.getElementById("bookingForm");
 
-if(form){
+if (form) {
 
-form.addEventListener("submit",function(e){
+    form.addEventListener("submit", function (e) {
 
-e.preventDefault();
+        e.preventDefault();
 
-const name=document.getElementById("name").value.trim();
-const email=document.getElementById("email").value.trim();
-const phone=document.getElementById("phone").value.trim();
-const destination=document.getElementById("destination").value;
-const message=document.getElementById("message").value.trim();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const destination = document.getElementById("destination").value;
+        const message = document.getElementById("message").value.trim();
 
-const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phonePattern=/^[6-9]\d{9}$/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phonePattern = /^[6-9]\d{9}$/;
 
-if(name===""){
-alert("Please enter your name.");
-return;
-}
+        if (name === "") {
+            alert("Please enter your name.");
+            return;
+        }
 
-if(!emailPattern.test(email)){
-alert("Please enter a valid email address.");
-return;
-}
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
 
-if(!phonePattern.test(phone)){
-alert("Please enter a valid 10-digit Indian mobile number.");
-return;
-}
+        if (!phonePattern.test(phone)) {
+            alert("Please enter a valid 10-digit Indian mobile number.");
+            return;
+        }
 
-if(destination===""){
-alert("Please select a destination.");
-return;
-}
+        if (destination === "") {
+            alert("Please select a destination.");
+            return;
+        }
 
-if(message===""){
-alert("Please enter your message.");
-return;
-}
+        if (message === "") {
+            alert("Please enter your message.");
+            return;
+        }
 
-document.getElementById("popup").style.display="flex";
+        document.getElementById("popup").style.display = "flex";
 
-form.reset();
+        form.reset();
 
-});
-
-}
-
-function closePopup(){
-
-document.getElementById("popup").style.display="none";
+    });
 
 }
+
+function closePopup() {
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
+
+// Hamburger Menu
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
-if(menuToggle){
+if (menuToggle && navLinks) {
 
-menuToggle.addEventListener("click",function(){
+    menuToggle.addEventListener("click", function () {
 
-navLinks.classList.toggle("active");
+        navLinks.classList.toggle("active");
 
-});
+    });
 
 }
