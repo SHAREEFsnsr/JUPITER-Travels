@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | JUPITER Travels</title>
+
+    <meta name="description" content="Contact JUPITER Travels to book your dream vacation.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+        <nav>
+
+            <h2 class="logo">JUPITER Travels</h2>
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- Banner -->
+
+    <section class="page-banner">
+        <h1>CONTACT US</h1>
+        <p>Let's plan your next unforgettable journey.</p>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+
+            <h2>Contact Information</h2>
+
+            <p><strong>📍 Address:</strong> Hyderabad, Telangana, India</p>
+
+            <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+
+            <p><strong>📧 Email:</strong> info@jupitertravels.com</p>
+
+            <p><strong>🕒 Office Hours:</strong> Monday - Saturday (9:00 AM - 7:00 PM)</p>
+
+        </div>
+
+        <div class="contact-form">
+
+            <h2>Book Your Trip</h2>
+
+            <form id="bookingForm">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+
+                <input type="email" id="email" placeholder="Email Address" required>
+
+                <input type="tel" id="phone" placeholder="Phone Number" maxlength="10" required>
+
+                <select id="destination" required>
+
+                    <option value="">Select Destination</option>
+
+                    <option>Goa</option>
+                    <option>Kashmir</option>
+                    <option>Kerala</option>
+                    <option>Jaipur</option>
+                    <option>Maldives</option>
+                    <option>Paris</option>
+                    <option>Leh-Ladakh</option>
+                    <option>Andaman</option>
+                    <option>Bali</option>
+                    <option>Dubai</option>
+                    <option>Japan</option>
+                    <option>Greece</option>
+
+                </select>
+
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit">
+                    Submit Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Success Popup -->
+
+    <div id="popup" class="popup">
+
+        <div class="popup-content">
+
+            <div class="checkmark">✔</div>
+
+            <h2>Booking Submitted!</h2>
+
+            <p>
+                Thank you for choosing
+                <strong>JUPITER Travels</strong>.
+                <br><br>
+                We will contact you soon.
+            </p>
+
+            <button onclick="closePopup()">
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>JUPITER Travels</h2>
+
+            <p>Explore Beyond Limits</p>
+
+            <p>Email: info@jupitertravels.com</p>
+
+            <p>Phone: +91 98765 43210</p>
+
+            <p>Hyderabad, Telangana, India</p>
+
+            <hr>
+
+            <p>&copy; 2026 JUPITER Travels. All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
