@@ -13,7 +13,7 @@ body {
 /* Navigation */
 header {
     background: #2a4f54;
-    padding: 15px 8%;
+    padding: 0px;
 }
 
 nav {
@@ -80,8 +80,8 @@ nav ul li a:hover {
     padding: 15px 35px;
     border: none;
     border-radius: 30px;
-    background: orange;
-    color: white;
+    background: rgb(0 109 255 / 45%);
+    color: rgb(0, 0, 0);
     font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
@@ -765,7 +765,7 @@ nav{
 }
 
 .logo{
-    color:rgb(246, 255, 0);
+    color:rgb(0, 0, 0);
     font-size:30px;
     font-weight:bold;
 }
