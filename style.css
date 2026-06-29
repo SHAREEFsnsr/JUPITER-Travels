@@ -761,11 +761,11 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:18px 8%;
-    background:#0d6efd;
+    background:#2a4f54;
 }
 
 .logo{
-    color:white;
+    color:rgb(246, 255, 0);
     font-size:30px;
     font-weight:bold;
 }
